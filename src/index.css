@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased transition-colors duration-300;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-slate-600 rounded-full;
+}
+
+/* Background Patterns */
+.bg-grid-pattern {
+  background-image: radial-gradient(circle, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dark .bg-grid-pattern {
+  background-image: radial-gradient(circle, rgba(99, 102, 241, 0.15) 1px, transparent 1px);
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  @apply bg-white/70 dark:bg-slate-800/70 backdrop-blur-lg border border-white/20 dark:border-white/5;
+}
+
+.glass-card {
+  @apply bg-white dark:bg-slate-800 shadow-xl shadow-indigo-100/20 dark:shadow-none border border-gray-100 dark:border-slate-700;
+}
+
+/* Dark Mode Surfaces */
+.dark body {
+  background-color: #0f172a; /* Slate 900 */
+  color: #f8fafc;
+}
+
+.dark .surface-1 {
+  background-color: #1e293b; /* Slate 800 */
+}
+
+.dark .surface-2 {
+  background-color: #334155; /* Slate 700 */
+}
